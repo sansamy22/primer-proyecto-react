@@ -102,38 +102,112 @@ body {
 }
 
 
-/* ========================================
-   ENCABEZADO
-======================================== */
+/* ENCABEZADO PRINCIPAL */
 
 .encabezado {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
-    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 260px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 15px 30px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
 }
 
-.encabezado h1 {
-    font-size: 1.45rem;
-    font-weight: 600;
+
+/* CONTENEDOR DEL LOGO Y TÍTULO */
+
+.encabezado-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.encabezado nav a {
-    color: var(--blanco);
-    margin-left: 1.2rem;
-    text-decoration: none;
-    font-size: 0.95rem;
-    opacity: 0.9;
-    transition: opacity 0.2s ease;
+
+/* LOGO DE REACT */
+
+.encabezado-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 30px;
+    background-color: #e0f7ff;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
 }
 
-.encabezado nav a:hover {
-    opacity: 1;
-    text-decoration: underline;
+
+/* ANIMACIÓN DEL LOGO */
+
+.encabezado-logo:hover {
+    transform: rotate(30deg) scale(1.1);
+}
+
+
+/* TÍTULO DEL DASHBOARD */
+
+.encabezado-marca h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+
+/* CONTENEDOR DEL MENÚ DE USUARIO */
+
+.encabezado .menu-usuario {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+
+/* ADAPTACIÓN PARA TABLETS */
+
+@media (max-width: 768px) {
+    .encabezado {
+        padding: 12px 20px;
+    }
+    .encabezado-marca h1 {
+        font-size: 20px;
+    }
+    .encabezado-logo {
+        width: 42px;
+        height: 42px;
+        font-size: 26px;
+    }
+}
+
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 480px) {
+    .encabezado {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+    .encabezado-marca {
+        gap: 8px;
+        min-width: 0;
+    }
+    .encabezado-marca h1 {
+        font-size: 16px;
+    }
+    .encabezado-logo {
+        width: 35px;
+        height: 35px;
+        font-size: 23px;
+        flex-shrink: 0;
+    }
+    .encabezado .menu-usuario {
+        margin-left: auto;
+    }
 }
 
 
@@ -230,62 +304,6 @@ body {
     color: var(--blanco);
     margin-left: 260px;
     font-size: 0.9rem;
-}
-
-
-/* ========================================
-   ENCABEZADO
-======================================== */
-
-.encabezado {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
-    padding: 0.9rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 260px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-
-
-/* Contenedor de marca + navegación */
-
-.encabezado-marca {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.encabezado-marca h1 {
-    font-size: 1.35rem;
-    font-weight: 600;
-    margin: 0;
-    white-space: nowrap;
-}
-
-.encabezado-marca nav {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.encabezado-marca nav a {
-    color: var(--blanco);
-    text-decoration: none;
-    font-size: 0.95rem;
-    padding: 0.45rem 0.9rem;
-    border-radius: 6px;
-    opacity: 0.9;
-    transition: all 0.2s ease;
-}
-
-.encabezado-marca nav a:hover {
-    background-color: rgba(255, 255, 255, 0.12);
-    opacity: 1;
 }
 
 

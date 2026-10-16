@@ -1,18 +1,15 @@
 import MenuUsuario from "./MenuUsuario"
 
-function Encabezado(){
+function Encabezado({usuario}){
     return(
         <header className="encabezado">
             <div className="encabezado-marca">
-                <h1> Mi primera app con react</h1>
+                <span className="encabezado-logo">⚛️</span>
+                <h1> Mi Dashboard</h1>
 
-                <nav>
-                    <a href="#"> inicio </a>
-                    <a href="#"> Tecnologias </a>
-                    <a href="#"> contacto </a>
-                </nav>
+
             </div>
-            <MenuUsuario/>
+            <MenuUsuario usuario={usuario}/>
         </header>
     )
 }

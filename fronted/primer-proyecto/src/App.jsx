@@ -4,14 +4,19 @@ import Sidebar from './componentes/sidebar'
 import Tarjeta from './componentes/Tarjeta'
 import PiePagina from './Componentes/PiePagina'  
 import Presentacion from './componentes/Presentacion' 
-
+import fotoperfil from './imagenes/RIAS.jpg'
 
 function App(){
   const programa ="Analisis y Desarrollo de software"
+  const usuario = {
+    nombre : 'SAMY PASSU VARGAS',
+    rol : 'Aprendiz ADSO',
+    foto : fotoperfil
+  }
   return(
     <>
     <div  className='layaut'>
-    <Encabezado/>
+    <Encabezado usuario = {usuario}/>
 
     <Sidebar/>
     <main className='contenido'>
