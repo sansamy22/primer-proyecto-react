@@ -1,16 +1,27 @@
-import reactlogo from '../assets/react.svg'
 
-
-function Tarjeta(){
+function Tarjeta({icono, titulo, descripcion, horas, destacada}){ //props: son propiedades 
+    
     return(
-        <article className='tarjeta'>
-            <img src={reactlogo} alt='Logo de React'/>
-            <h3> React </h3>
-            <p>Biblioteca de javascript para 
-                construir interffaces con componenntes
-            </p>
+        <article className={destacada ? 'tarjeta tarjeta-destacada' : 'tarjeta'}>
+            <span className='tarjeta-icono'>{icono}</span>
+            <h3>{titulo}</h3>
+            <p>{descripcion}</p>
+            <p className='tarjetas-horas'>⌚{horas} horas</p>
         </article>
     )
 }
 
 export default Tarjeta
+
+/*  antes teniamos que asignar la propiedad para definir 
+function Tarjeta(props){ //props: son propiedades 
+    console.log(props)
+    return(
+        <article className='tarjeta'>
+            <span className='tarjeta-icono'>{props.icono}</span>
+            <h3>{props.titulo}</h3>
+            <p>{props.descripcion}</p>
+        </article>
+    )
+}
+*/ 

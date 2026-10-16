@@ -1,8 +1,8 @@
-import fotoperfil from '../imagenes/foto.jpg'
+import fotoperfil from '../imagenes/RIAS.jpg'
 
 function MenuUsuario(){
-    const nombre='Einer Hoyos'
-    const rol ='Estudiante Adso'
+    const nombre='SAMY PASSU'
+    const rol ='Estudiante ADSO'
 
     return(
         <div className='menu-usuario'>
